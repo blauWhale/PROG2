@@ -65,3 +65,4 @@ def spiel():
         print("Computer verliert! Du gewinnst!")
 
 spiel()
+
