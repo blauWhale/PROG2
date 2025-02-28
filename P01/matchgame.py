@@ -4,7 +4,10 @@ def anzeigen(stapel):
     """Zeigt den aktuellen Streichholzstapel an"""
     for i in range(stapel):
         print("========O")
-    print("| Noch", stapel, "Streichhölzer. |")
+    if stapel == 1:
+        print("| Noch", stapel, "Streichholz. |")
+    else:
+        print("| Noch", stapel, "Streichhölzer. |")
     print("\n")
     
 def spieler_zug(stapel):
