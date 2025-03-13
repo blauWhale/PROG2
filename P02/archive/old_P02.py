@@ -2,7 +2,7 @@ import time
 from datetime import datetime
 import os
 import sys
-from bankaccount import BankAccount
+from P02.class_files.bankaccount import BankAccount
 
 
 
