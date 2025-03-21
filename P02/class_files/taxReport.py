@@ -19,18 +19,12 @@ class TaxReport:
             account_type = account.get_type()
             balance = account.get_balance()
             
-            # Update type totals
-            if account_type not in account_types:
-                account_types[account_type] = 0
-            account_types[account_type] += balance
-            
             # Update overall total
             total_wealth += balance
         
         # Print results
-        currency = list(bank_app.accounts.values())[0].get_currency()
         for account_type, balance in account_types.items():
-            print(f"** {account_type} ** {balance:.2f} {currency}")
+            print(f"** {account_type} ** {balance}")
 
-        print(f"Total wealth: {total_wealth:.2f} {currency}")
+        print(f"Total wealth: {total_wealth}")
         return True
