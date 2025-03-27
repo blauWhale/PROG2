@@ -2,11 +2,11 @@ from datetime import datetime
 from class_files.bankaccount import BankAccount
 
 class YouthAccount(BankAccount):
-    def __init__(self, identifier, age):
+    def __init__(self, identifier, age, currency="CHF"):
         if age > 25:
             raise ValueError("Youth account can only be opened for people aged 25 or under")
         
-        super().__init__(identifier)
+        super().__init__(identifier, currency)
         self.__interest_rate = 0.02
         self.__age = age
         self.__last_interest_date = datetime.now()

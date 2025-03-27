@@ -1,9 +1,9 @@
 class BankAccount:
-        def __init__(self, identifier):
+        def __init__(self, identifier, currency="CHF"):
             self.__identifier = identifier
             self.__balance = 0.0
             self.__is_open = True
-            self.__currency = "Fr"
+            self.__currency = currency.upper()
             self.__max_balance = 100000.0
 
         def deposit(self, amount):

@@ -2,8 +2,8 @@ from datetime import datetime
 from class_files.bankaccount import BankAccount
 
 class SavingAccount(BankAccount):
-    def __init__(self, identifier):
-        super().__init__(identifier)
+    def __init__(self, identifier, currency="CHF"):
+        super().__init__(identifier,currency)
         self.__interest_rate = 0.001  
         self.__last_interest_date = datetime.now()
         self.__type = "Savings Account"

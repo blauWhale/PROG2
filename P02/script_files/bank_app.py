@@ -15,12 +15,12 @@ class BankApplication:
         print(f"User {username} authenticated successfully")
         return True
 
-    def open_account(self, account_type, identifier, age=None):
+    def open_account(self, account_type, identifier, currency="CHF", age=None):
         if account_type.lower() == "savings":
-            self.accounts[identifier] = SavingAccount(identifier)
+            self.accounts[identifier] = SavingAccount(identifier,currency)
             print(f"Savings account {identifier} created successfully")
         elif account_type.lower() == "youth":
-            self.accounts[identifier] = YouthAccount(identifier, age)
+            self.accounts[identifier] = YouthAccount(identifier, age, currency)
             print(f"Youth account {identifier} created for age {age}")
         return True
 

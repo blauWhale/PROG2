@@ -9,7 +9,7 @@ def run_simulation():
     bank_app.authenticate("user123", "password")
     
     bank_app.open_account("savings", "SA001")
-    bank_app.open_account("youth", "YA001", 18)
+    bank_app.open_account("youth", "YA001", "EUR", 18)
     
     bank_app.print_account_states()
     
