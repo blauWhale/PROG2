@@ -3,13 +3,15 @@ from script_files.bank_app import BankApplication
 from class_files.taxReport import TaxReport
 
 def run_simulation():
-    print("=== Banking Simulation ===")
+    print("=== Banking Simulation with Multi-Currency Support ===")
     
     bank_app = BankApplication()
     bank_app.authenticate("user123", "password")
     
-    bank_app.open_account("savings", "SA001")
-    bank_app.open_account("youth", "YA001", "EUR", 18)
+    # Create accounts with different currencies
+    bank_app.open_account("savings", "SA001")  # Default CHF
+    bank_app.open_account("youth", "YA001", "EUR", 18)  # EUR account
+    bank_app.open_account("savings", "SA002", "USD")  # USD account
     
     bank_app.print_account_states()
     
@@ -20,9 +22,13 @@ def run_simulation():
     bank_app.select_account("YA001")
     bank_app.deposit(20000)
     
+    bank_app.select_account("SA002")
+    bank_app.deposit(30000)
+    
     bank_app.print_account_states()
     
     print("\n=== Youth Account Withdrawals ===")
+    bank_app.select_account("YA001")
     bank_app.withdraw(1500)
     bank_app.withdraw(1000)
     print("Trying to exceed withdrawal limit:")
@@ -40,7 +46,7 @@ def run_simulation():
     
     bank_app.print_account_states()
     
-    print("\n=== Tax Report ===")
+    print("\n=== Tax Report with Currency Conversion ===")
     TaxReport.generate(bank_app)
 
 if __name__ == "__main__":
