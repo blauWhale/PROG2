@@ -44,7 +44,7 @@ class SavingAccount(BankAccount):
     def apply_interest(self):
         current_time = datetime.now()
         seconds_passed = (current_time - self.__last_interest_date).total_seconds()
-        months_passed = int(seconds_passed / 10)
+        months_passed = int(seconds_passed)
         
         if months_passed > 0:
             for _ in range(months_passed):
