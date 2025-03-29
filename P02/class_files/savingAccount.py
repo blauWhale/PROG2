@@ -47,11 +47,16 @@ class SavingAccount(BankAccount):
         months_passed = int(seconds_passed)
         
         if months_passed > 0:
+            balance = self.get_balance()
             for _ in range(months_passed):
                 interest = self.get_balance() * self.__interest_rate
                 if interest > 0:
                     super().deposit(interest)
-            
+                elif balance < 0:  
+                    penalty = balance * abs(self.__interest_rate)  
+                    super().withdraw(-penalty)  
             self.__last_interest_date = current_time
             return months_passed
         return 0
+    
+   
