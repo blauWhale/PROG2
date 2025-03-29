@@ -5,6 +5,7 @@ class SavingAccount(BankAccount):
     def __init__(self, identifier, currency="CHF"):
         super().__init__(identifier,currency)
         self.__interest_rate = 0.001  
+        self.__penalty_rate = 0.005
         self.__last_interest_date = datetime.now()
         self.__type = "Savings Account"
 
@@ -40,23 +41,36 @@ class SavingAccount(BankAccount):
             return False
         else:
             return super().withdraw(amount)
+        
+    def set_penalty_rate(self, rate):
+        """
+        Sets the penalty rate for negative balances.
+    
+        """
+        if rate < 0:
+            print("Penalty rate cannot be negative. Setting failed.")
+            return False
+        self.__penalty_rate = rate
+        return True
 
     def apply_interest(self):
         current_time = datetime.now()
         seconds_passed = (current_time - self.__last_interest_date).total_seconds()
         months_passed = int(seconds_passed)
-        
+
         if months_passed > 0:
-            balance = self.get_balance()
             for _ in range(months_passed):
-                interest = self.get_balance() * self.__interest_rate
+                balance = self.get_balance() 
+
+                interest = balance * self.__interest_rate
                 if interest > 0:
                     super().deposit(interest)
-                elif balance < 0:  
-                    penalty = balance * abs(self.__interest_rate)  
-                    super().withdraw(-penalty)  
+                elif balance < 0:
+                    penalty = abs(balance) * self.__penalty_rate  
+                    super().withdraw(penalty)  
+            
             self.__last_interest_date = current_time
             return months_passed
         return 0
     
-   
+ 
