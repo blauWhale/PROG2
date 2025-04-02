@@ -35,6 +35,11 @@ class TaxReport:
                 print(f"{balance:.2f} CHF from {account.get_identifier()} (no conversion needed)\n")
             total_wealth_chf += amount_chf
             
+        if account_type in account_types:
+            account_types[account_type] += amount_chf
+        else:
+            account_types[account_type] = amount_chf
+            
         # Print results
         for account_type, balance in account_types.items():
             print(f"** {account_type} ** {balance}")
