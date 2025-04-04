@@ -55,8 +55,12 @@ class BOMService:
         # Sortierte Materialliste erstellen
         items = sorted(data.items())
         
-        # Summe berechnen (nur numerische Werte)
-        total = sum(float(cost) for _, cost in items if isinstance(cost, (int, float)))
+        numerical_costs = []
+        for material, cost in items:
+            if isinstance(cost, (int, float)):
+                numerical_costs.append(float(cost))
+                
+        total = sum(numerical_costs)
         
         # Tabelle erstellen
         result = "MAT1 | COST1\n"
