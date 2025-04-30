@@ -1,0 +1,693 @@
+{
+  "cities": {
+    "1": {
+      "city": "Zurich",
+      "id": "8503000",
+      "name": "Z\u00fcrich HB",
+      "latitude": 47.377847,
+      "longitude": 8.540502
+    },
+    "2": {
+      "city": "Geneva",
+      "id": "8501008",
+      "name": "Gen\u00e8ve",
+      "latitude": 46.210228,
+      "longitude": 6.142435
+    },
+    "3": {
+      "city": "Basel",
+      "id": "8500010",
+      "name": "Basel SBB",
+      "latitude": 47.547412,
+      "longitude": 7.589577
+    },
+    "4": {
+      "city": "Lausanne",
+      "id": "8501120",
+      "name": "Lausanne",
+      "latitude": 46.516795,
+      "longitude": 6.629087
+    },
+    "5": {
+      "city": "Bern",
+      "id": "8507000",
+      "name": "Bern",
+      "latitude": 46.948832,
+      "longitude": 7.439136
+    },
+    "6": {
+      "city": "Winterthur",
+      "id": "8506000",
+      "name": "Winterthur",
+      "latitude": 47.500331,
+      "longitude": 8.723822
+    },
+    "7": {
+      "city": "Lucerne",
+      "id": "8505000",
+      "name": "Luzern",
+      "latitude": 47.050174,
+      "longitude": 8.310185
+    },
+    "8": {
+      "city": "St. Gallen",
+      "id": "8506302",
+      "name": "St. Gallen",
+      "latitude": 47.42318,
+      "longitude": 9.369902
+    },
+    "9": {
+      "city": "Lugano",
+      "id": "8505300",
+      "name": "Lugano",
+      "latitude": 46.005494,
+      "longitude": 8.946993
+    },
+    "10": {
+      "city": "Biel/Bienne",
+      "id": "8504300",
+      "name": "Biel/Bienne",
+      "latitude": 47.132902,
+      "longitude": 7.242918
+    },
+    "11": {
+      "city": "La Chaux-de-Fonds",
+      "id": "8504314",
+      "name": "La Chaux-de-Fonds",
+      "latitude": 47.09838,
+      "longitude": 6.825994
+    },
+    "12": {
+      "city": "Fribourg",
+      "id": "8504100",
+      "name": "Fribourg/Freiburg",
+      "latitude": 46.803151,
+      "longitude": 7.151052
+    },
+    "13": {
+      "city": "Schaffhausen",
+      "id": "8503424",
+      "name": "Schaffhausen",
+      "latitude": 47.69828,
+      "longitude": 8.632748
+    },
+    "14": {
+      "city": "Chur",
+      "id": "8509000",
+      "name": "Chur",
+      "latitude": 46.853078,
+      "longitude": 9.528939
+    },
+    "15": {
+      "city": "Neuch\u00e2tel",
+      "id": "8504221",
+      "name": "Neuch\u00e2tel",
+      "latitude": 46.996727,
+      "longitude": 6.935713
+    },
+    "16": {
+      "city": "Thun",
+      "id": "8507100",
+      "name": "Thun",
+      "latitude": 46.75485,
+      "longitude": 7.629608
+    },
+    "17": {
+      "city": "Sion",
+      "id": "8501506",
+      "name": "Sion",
+      "latitude": 46.227553,
+      "longitude": 7.359183
+    },
+    "18": {
+      "city": "Uster",
+      "id": "8503125",
+      "name": "Uster",
+      "latitude": 47.350364,
+      "longitude": 8.718713
+    },
+    "19": {
+      "city": "Sierre",
+      "id": "8501509",
+      "name": "Sierre/Siders",
+      "latitude": 46.292121,
+      "longitude": 7.532824
+    },
+    "20": {
+      "city": "Zug",
+      "id": "8502204",
+      "name": "Zug",
+      "latitude": 47.173702,
+      "longitude": 8.515047
+    },
+    "21": {
+      "city": "Montreux",
+      "id": "8501300",
+      "name": "Montreux",
+      "latitude": 46.435887,
+      "longitude": 6.910438
+    },
+    "22": {
+      "city": "Yverdon-les-Bains",
+      "id": "8504200",
+      "name": "Yverdon-les-Bains",
+      "latitude": 46.78155,
+      "longitude": 6.640943
+    },
+    "23": {
+      "city": "Schlieren",
+      "id": "8503509",
+      "name": "Schlieren",
+      "latitude": 47.399171,
+      "longitude": 8.447241
+    },
+    "24": {
+      "city": "Vevey",
+      "id": "8501200",
+      "name": "Vevey",
+      "latitude": 46.463002,
+      "longitude": 6.843443
+    },
+    "25": {
+      "city": "Nyon",
+      "id": "8501030",
+      "name": "Nyon",
+      "latitude": 46.38443,
+      "longitude": 6.235963
+    },
+    "26": {
+      "city": "Vernier",
+      "id": "8587924",
+      "name": "Vernier, Blandonnet",
+      "latitude": 46.221937,
+      "longitude": 6.09723
+    },
+    "27": {
+      "city": "K\u00f6niz",
+      "id": "8571413",
+      "name": "K\u00f6niz, Br\u00fchlplatz",
+      "latitude": 46.926198,
+      "longitude": 7.417025
+    },
+    "28": {
+      "city": "Wettingen",
+      "id": "8503505",
+      "name": "Wettingen",
+      "latitude": 47.459634,
+      "longitude": 8.316013
+    },
+    "29": {
+      "city": "Frauenfeld",
+      "id": "8506100",
+      "name": "Frauenfeld",
+      "latitude": 47.558159,
+      "longitude": 8.89656
+    },
+    "30": {
+      "city": "Bellinzona",
+      "id": "8505213",
+      "name": "Bellinzona",
+      "latitude": 46.195425,
+      "longitude": 9.029522
+    },
+    "31": {
+      "city": "Aarau",
+      "id": "8502113",
+      "name": "Aarau",
+      "latitude": 47.391361,
+      "longitude": 8.051284
+    },
+    "32": {
+      "city": "Baden",
+      "id": "8503504",
+      "name": "Baden",
+      "latitude": 47.476417,
+      "longitude": 8.307706
+    },
+    "33": {
+      "city": "Bulle",
+      "id": "8504086",
+      "name": "Bulle",
+      "latitude": 46.619227,
+      "longitude": 7.053004
+    },
+    "34": {
+      "city": "Carouge",
+      "id": "8587437",
+      "name": "Carouge GE, Rondeau",
+      "latitude": 46.179881,
+      "longitude": 6.138377
+    },
+    "35": {
+      "city": "Crissier",
+      "id": "8591939",
+      "name": "Crissier, Zinguerie",
+      "latitude": 46.54364,
+      "longitude": 6.570536
+    },
+    "36": {
+      "city": "Ecublens",
+      "id": "8504018",
+      "name": "Ecublens-Rue",
+      "latitude": 46.610432,
+      "longitude": 6.811053
+    },
+    "37": {
+      "city": "Emmen",
+      "id": "8577271",
+      "name": "Emmenbr\u00fccke, Emmen Center",
+      "latitude": 47.073228,
+      "longitude": 8.28765
+    },
+    "38": {
+      "city": "Lancy",
+      "id": "8516155",
+      "name": "Lancy-Pont-Rouge",
+      "latitude": 46.18596,
+      "longitude": 6.124929
+    },
+    "39": {
+      "city": "Martigny",
+      "id": "8501500",
+      "name": "Martigny",
+      "latitude": 46.105829,
+      "longitude": 7.079108
+    },
+    "40": {
+      "city": "Meyrin",
+      "id": "8501006",
+      "name": "Meyrin",
+      "latitude": 46.22235,
+      "longitude": 6.076882
+    },
+    "41": {
+      "city": "Morges",
+      "id": "8501037",
+      "name": "Morges",
+      "latitude": 46.511111,
+      "longitude": 6.493971
+    },
+    "42": {
+      "city": "Onex",
+      "id": "8587080",
+      "name": "Onex, Salle communale",
+      "latitude": 46.183383,
+      "longitude": 6.100109
+    },
+    "43": {
+      "city": "Renens",
+      "id": "8501118",
+      "name": "Renens VD",
+      "latitude": 46.537046,
+      "longitude": 6.578933
+    },
+    "44": {
+      "city": "Thalwil",
+      "id": "8503202",
+      "name": "Thalwil",
+      "latitude": 47.29598,
+      "longitude": 8.564768
+    },
+    "45": {
+      "city": "Veyrier",
+      "id": "8593210",
+      "name": "Veyrier, Pont de Sierne",
+      "latitude": 46.178711,
+      "longitude": 6.182065
+    },
+    "46": {
+      "city": "Zollikon",
+      "id": "8503100",
+      "name": "Zollikon",
+      "latitude": 47.337328,
+      "longitude": 8.569743
+    },
+    "47": {
+      "city": "Paris",
+      "id": "8768600",
+      "name": "Paris Gare de Lyon",
+      "latitude": 48.844997,
+      "longitude": 2.373915
+    },
+    "48": {
+      "city": "Lyon",
+      "id": "8772319",
+      "name": "Lyon Part Dieu",
+      "latitude": 45.76062,
+      "longitude": 4.859965
+    },
+    "49": {
+      "city": "Marseille",
+      "id": "8775100",
+      "name": "Marseille-Saint-Charles",
+      "latitude": 43.304062,
+      "longitude": 5.381438
+    },
+    "50": {
+      "city": "Nice",
+      "id": "8775605",
+      "name": "Nice-Ville",
+      "latitude": 43.704943,
+      "longitude": 7.261687
+    },
+    "51": {
+      "city": "Nantes",
+      "id": "8748100",
+      "name": "Nantes",
+      "latitude": 47.216801,
+      "longitude": -1.542726
+    },
+    "52": {
+      "city": "Strasbourg",
+      "id": "8721202",
+      "name": "Strasbourg",
+      "latitude": 48.585095,
+      "longitude": 7.735153
+    },
+    "53": {
+      "city": "Montpellier",
+      "id": "8777300",
+      "name": "Montpellier Saint-Roch",
+      "latitude": 43.604834,
+      "longitude": 3.880408
+    },
+    "54": {
+      "city": "Lille",
+      "id": "8722326",
+      "name": "Lille-Europe",
+      "latitude": 50.639453,
+      "longitude": 3.077552
+    },
+    "55": {
+      "city": "Rennes",
+      "id": "8747100",
+      "name": "Rennes",
+      "latitude": 48.103043,
+      "longitude": -1.674861
+    },
+    "56": {
+      "city": "Reims",
+      "id": "8717100",
+      "name": "Reims",
+      "latitude": 49.259341,
+      "longitude": 4.024412
+    },
+    "57": {
+      "city": "Saint-\u00c9tienne",
+      "id": "8507276",
+      "name": "St. Stephan",
+      "latitude": 46.505125,
+      "longitude": 7.400517
+    },
+    "58": {
+      "city": "Toulon",
+      "id": "8775500",
+      "name": "Toulon",
+      "latitude": 43.128658,
+      "longitude": 5.929116
+    },
+    "59": {
+      "city": "Grenoble",
+      "id": "8774700",
+      "name": "Grenoble",
+      "latitude": 45.191238,
+      "longitude": 5.714087
+    },
+    "60": {
+      "city": "Dijon",
+      "id": "8771304",
+      "name": "Dijon",
+      "latitude": 47.322954,
+      "longitude": 5.026144
+    },
+    "61": {
+      "city": "Angers",
+      "id": "8748400",
+      "name": "Angers-St-Laud",
+      "latitude": 47.464005,
+      "longitude": -0.55956
+    },
+    "62": {
+      "city": "N\u00eemes",
+      "id": "8777500",
+      "name": "N\u00eemes",
+      "latitude": 43.832633,
+      "longitude": 4.365839
+    },
+    "63": {
+      "city": "Metz",
+      "id": "8719203",
+      "name": "Metz Ville",
+      "latitude": 49.109389,
+      "longitude": 6.177838
+    },
+    "64": {
+      "city": "Rouen",
+      "id": "8741101",
+      "name": "Rouen-Rive-Droite",
+      "latitude": 49.449306,
+      "longitude": 1.093587
+    },
+    "65": {
+      "city": "Brest",
+      "id": "8747400",
+      "name": "Brest (F)",
+      "latitude": 48.386938,
+      "longitude": -4.487343
+    },
+    "66": {
+      "city": "Le Mans",
+      "id": "8739600",
+      "name": "Le Mans",
+      "latitude": 47.99535,
+      "longitude": 0.191149
+    },
+    "67": {
+      "city": "Tours",
+      "id": "8587037",
+      "name": "Carouge GE, Tours",
+      "latitude": 46.183525,
+      "longitude": 6.135298
+    },
+    "68": {
+      "city": "Clermont-Ferrand",
+      "id": "8773400",
+      "name": "Clermont-Ferrand",
+      "latitude": 45.778763,
+      "longitude": 3.101121
+    },
+    "69": {
+      "city": "Limoges",
+      "id": "8759200",
+      "name": "Limoges-B\u00e9n\u00e9dictins",
+      "latitude": 45.836469,
+      "longitude": 1.2676
+    },
+    "70": {
+      "city": "Perpignan",
+      "id": "8778400",
+      "name": "Perpignan",
+      "latitude": 42.696569,
+      "longitude": 2.878604
+    },
+    "71": {
+      "city": "Avignon",
+      "id": "8776500",
+      "name": "Avignon Centre",
+      "latitude": 43.941358,
+      "longitude": 4.80602
+    },
+    "72": {
+      "city": "Besan\u00e7on",
+      "id": "8771800",
+      "name": "Besan\u00e7on Viotte",
+      "latitude": 47.247349,
+      "longitude": 6.022024
+    },
+    "73": {
+      "city": "Orl\u00e9ans",
+      "id": "8754300",
+      "name": "Orl\u00e9ans",
+      "latitude": 47.908092,
+      "longitude": 1.904323
+    },
+    "74": {
+      "city": "Mulhouse",
+      "id": "8718206",
+      "name": "Mulhouse",
+      "latitude": 47.741954,
+      "longitude": 7.343072
+    },
+    "75": {
+      "city": "Troyes",
+      "id": "8711800",
+      "name": "Troyes",
+      "latitude": 48.295989,
+      "longitude": 4.064619
+    },
+    "76": {
+      "city": "Poitiers",
+      "id": "8757500",
+      "name": "Poitiers",
+      "latitude": 46.582203,
+      "longitude": 0.333027
+    },
+    "77": {
+      "city": "Pau",
+      "id": "8589823",
+      "name": "Luzern, Paulusplatz",
+      "latitude": 47.043263,
+      "longitude": 8.303441
+    }
+  },
+  "train_companies": {
+    "1": {
+      "country": "Italia",
+      "url": "https://www.trenitalia.com"
+    },
+    "2": {
+      "country": "Italy",
+      "url": "https://www.trenitalia.com"
+    },
+    "3": {
+      "country": "Deutschland",
+      "url": "https://www.bahn.com"
+    },
+    "4": {
+      "country": "Germany",
+      "url": "https://www.bahn.com"
+    },
+    "5": {
+      "country": "France",
+      "url": "https://www.sncf.com"
+    },
+    "6": {
+      "country": "Schweiz",
+      "url": "https://www.sbb.ch"
+    },
+    "7": {
+      "country": "Suisse",
+      "url": "https://www.sbb.ch"
+    },
+    "8": {
+      "country": "Svizzera",
+      "url": "https://www.sbb.ch"
+    },
+    "9": {
+      "country": "Svizra",
+      "url": "https://www.sbb.ch"
+    },
+    "10": {
+      "country": "Switzerland",
+      "url": "https://www.sbb.ch"
+    },
+    "11": {
+      "country": "\u00d6sterreich",
+      "url": "https://www.oebb.at"
+    },
+    "12": {
+      "country": "Austria",
+      "url": "https://www.oebb.at"
+    },
+    "13": {
+      "country": "Magyarorsz\u00e1g",
+      "url": "https://www.mavcsoport.hu"
+    },
+    "14": {
+      "country": "Hungary",
+      "url": "https://www.mavcsoport.hu"
+    },
+    "15": {
+      "country": "\u010cesk\u00e1 republika",
+      "url": "https://www.cd.cz"
+    },
+    "16": {
+      "country": "Czech Republic",
+      "url": "https://www.cd.cz"
+    },
+    "17": {
+      "country": "\u010cesko",
+      "url": "https://www.cd.cz"
+    },
+    "18": {
+      "country": "Nederland",
+      "url": "https://www.ns.nl"
+    },
+    "19": {
+      "country": "Netherlands",
+      "url": "https://www.ns.nl"
+    },
+    "20": {
+      "country": "Belgi\u00eb / belgique / belgien",
+      "url": "https://www.belgiantrain.be"
+    },
+    "21": {
+      "country": "United kingdom",
+      "url": "https://www.nationalrail.co.uk"
+    },
+    "22": {
+      "country": "UK",
+      "url": "https://www.nationalrail.co.uk"
+    },
+    "23": {
+      "country": "Espa\u00f1a",
+      "url": "https://www.renfe.com"
+    },
+    "24": {
+      "country": "Spain",
+      "url": "https://www.renfe.com"
+    },
+    "25": {
+      "country": "Portugal",
+      "url": "https://www.cp.pt"
+    },
+    "26": {
+      "country": "\u0395\u03bb\u03bb\u03ac\u03b4\u03b1",
+      "url": "https://www.trainose.gr"
+    },
+    "27": {
+      "country": "Greece",
+      "url": "https://www.trainose.gr"
+    },
+    "28": {
+      "country": "Srbija",
+      "url": "https://www.srbvoz.rs"
+    },
+    "29": {
+      "country": "Serbia",
+      "url": "https://www.srbvoz.rs"
+    },
+    "30": {
+      "country": "\u0411\u044a\u043b\u0433\u0430\u0440\u0438\u044f",
+      "url": "https://www.bdz.bg"
+    },
+    "31": {
+      "country": "Bulgaria",
+      "url": "https://www.bdz.bg"
+    },
+    "32": {
+      "country": "T\u00fcrkiye",
+      "url": "https://www.tcddtasimacilik.gov.tr"
+    },
+    "33": {
+      "country": "Turkey",
+      "url": "https://www.tcddtasimacilik.gov.tr"
+    },
+    "34": {
+      "country": "Polska",
+      "url": "https://www.intercity.pl"
+    },
+    "35": {
+      "country": "Poland",
+      "url": "https://www.intercity.pl"
+    },
+    "36": {
+      "country": "Rom\u00e2nia",
+      "url": "https://www.cfrcalatori.ro"
+    },
+    "37": {
+      "country": "Romania",
+      "url": "https://www.cfrcalatori.ro"
+    }
+  }
+}
