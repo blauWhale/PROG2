@@ -1,0 +1,541 @@
+[
+  {
+    "from": "Zurich",
+    "to": "Zürich HB",
+    "reachable": false,
+    "latitude": 47.377847,
+    "longitude": 8.540502
+  },
+  {
+    "from": "Zurich",
+    "to": "Genève",
+    "reachable": true,
+    "latitude": 46.210228,
+    "longitude": 6.142435
+  },
+  {
+    "from": "Zurich",
+    "to": "Basel SBB",
+    "reachable": true,
+    "latitude": 47.547412,
+    "longitude": 7.589577
+  },
+  {
+    "from": "Zurich",
+    "to": "Lausanne",
+    "reachable": true,
+    "latitude": 46.516795,
+    "longitude": 6.629087
+  },
+  {
+    "from": "Zurich",
+    "to": "Bern",
+    "reachable": true,
+    "latitude": 46.948832,
+    "longitude": 7.439136
+  },
+  {
+    "from": "Zurich",
+    "to": "Winterthur",
+    "reachable": true,
+    "latitude": 47.500331,
+    "longitude": 8.723822
+  },
+  {
+    "from": "Zurich",
+    "to": "Luzern",
+    "reachable": true,
+    "latitude": 47.050174,
+    "longitude": 8.310185
+  },
+  {
+    "from": "Zurich",
+    "to": "St. Gallen",
+    "reachable": true,
+    "latitude": 47.42318,
+    "longitude": 9.369902
+  },
+  {
+    "from": "Zurich",
+    "to": "Lugano",
+    "reachable": true,
+    "latitude": 46.005494,
+    "longitude": 8.946993
+  },
+  {
+    "from": "Zurich",
+    "to": "Biel/Bienne",
+    "reachable": true,
+    "latitude": 47.132902,
+    "longitude": 7.242918
+  },
+  {
+    "from": "Zurich",
+    "to": "La Chaux-de-Fonds",
+    "reachable": true,
+    "latitude": 47.09838,
+    "longitude": 6.825994
+  },
+  {
+    "from": "Zurich",
+    "to": "Fribourg/Freiburg",
+    "reachable": true,
+    "latitude": 46.803151,
+    "longitude": 7.151052
+  },
+  {
+    "from": "Zurich",
+    "to": "Schaffhausen",
+    "reachable": true,
+    "latitude": 47.69828,
+    "longitude": 8.632748
+  },
+  {
+    "from": "Zurich",
+    "to": "Chur",
+    "reachable": true,
+    "latitude": 46.853078,
+    "longitude": 9.528939
+  },
+  {
+    "from": "Zurich",
+    "to": "Neuchâtel",
+    "reachable": true,
+    "latitude": 46.996727,
+    "longitude": 6.935713
+  },
+  {
+    "from": "Zurich",
+    "to": "Thun",
+    "reachable": true,
+    "latitude": 46.75485,
+    "longitude": 7.629608
+  },
+  {
+    "from": "Zurich",
+    "to": "Sion",
+    "reachable": true,
+    "latitude": 46.227553,
+    "longitude": 7.359183
+  },
+  {
+    "from": "Zurich",
+    "to": "Uster",
+    "reachable": true,
+    "latitude": 47.350364,
+    "longitude": 8.718713
+  },
+  {
+    "from": "Zurich",
+    "to": "Sierre/Siders",
+    "reachable": true,
+    "latitude": 46.292121,
+    "longitude": 7.532824
+  },
+  {
+    "from": "Zurich",
+    "to": "Zug",
+    "reachable": true,
+    "latitude": 47.173702,
+    "longitude": 8.515047
+  },
+  {
+    "from": "Zurich",
+    "to": "Montreux",
+    "reachable": true,
+    "latitude": 46.435887,
+    "longitude": 6.910438
+  },
+  {
+    "from": "Zurich",
+    "to": "Yverdon-les-Bains",
+    "reachable": true,
+    "latitude": 46.78155,
+    "longitude": 6.640943
+  },
+  {
+    "from": "Zurich",
+    "to": "Schlieren",
+    "reachable": true,
+    "latitude": 47.399171,
+    "longitude": 8.447241
+  },
+  {
+    "from": "Zurich",
+    "to": "Vevey",
+    "reachable": true,
+    "latitude": 46.463002,
+    "longitude": 6.843443
+  },
+  {
+    "from": "Zurich",
+    "to": "Nyon",
+    "reachable": true,
+    "latitude": 46.38443,
+    "longitude": 6.235963
+  },
+  {
+    "from": "Zurich",
+    "to": "Vernier, Blandonnet",
+    "reachable": true,
+    "latitude": 46.221937,
+    "longitude": 6.09723
+  },
+  {
+    "from": "Zurich",
+    "to": "Köniz, Brühlplatz",
+    "reachable": true,
+    "latitude": 46.926198,
+    "longitude": 7.417025
+  },
+  {
+    "from": "Zurich",
+    "to": "Wettingen",
+    "reachable": true,
+    "latitude": 47.459634,
+    "longitude": 8.316013
+  },
+  {
+    "from": "Zurich",
+    "to": "Frauenfeld",
+    "reachable": true,
+    "latitude": 47.558159,
+    "longitude": 8.89656
+  },
+  {
+    "from": "Zurich",
+    "to": "Bellinzona",
+    "reachable": true,
+    "latitude": 46.195425,
+    "longitude": 9.029522
+  },
+  {
+    "from": "Zurich",
+    "to": "Aarau",
+    "reachable": true,
+    "latitude": 47.391361,
+    "longitude": 8.051284
+  },
+  {
+    "from": "Zurich",
+    "to": "Baden",
+    "reachable": true,
+    "latitude": 47.476417,
+    "longitude": 8.307706
+  },
+  {
+    "from": "Zurich",
+    "to": "Bulle",
+    "reachable": true,
+    "latitude": 46.619227,
+    "longitude": 7.053004
+  },
+  {
+    "from": "Zurich",
+    "to": "Carouge GE, Rondeau",
+    "reachable": true,
+    "latitude": 46.179881,
+    "longitude": 6.138377
+  },
+  {
+    "from": "Zurich",
+    "to": "Crissier, Zinguerie",
+    "reachable": true,
+    "latitude": 46.54364,
+    "longitude": 6.570536
+  },
+  {
+    "from": "Zurich",
+    "to": "Ecublens-Rue",
+    "reachable": true,
+    "latitude": 46.610432,
+    "longitude": 6.811053
+  },
+  {
+    "from": "Zurich",
+    "to": "Emmenbrücke, Emmen Center",
+    "reachable": true,
+    "latitude": 47.073228,
+    "longitude": 8.28765
+  },
+  {
+    "from": "Zurich",
+    "to": "Lancy-Pont-Rouge",
+    "reachable": true,
+    "latitude": 46.18596,
+    "longitude": 6.124929
+  },
+  {
+    "from": "Zurich",
+    "to": "Martigny",
+    "reachable": true,
+    "latitude": 46.105829,
+    "longitude": 7.079108
+  },
+  {
+    "from": "Zurich",
+    "to": "Meyrin",
+    "reachable": true,
+    "latitude": 46.22235,
+    "longitude": 6.076882
+  },
+  {
+    "from": "Zurich",
+    "to": "Morges",
+    "reachable": true,
+    "latitude": 46.511111,
+    "longitude": 6.493971
+  },
+  {
+    "from": "Zurich",
+    "to": "Onex, Salle communale",
+    "reachable": true,
+    "latitude": 46.183383,
+    "longitude": 6.100109
+  },
+  {
+    "from": "Zurich",
+    "to": "Renens VD",
+    "reachable": true,
+    "latitude": 46.537046,
+    "longitude": 6.578933
+  },
+  {
+    "from": "Zurich",
+    "to": "Thalwil",
+    "reachable": true,
+    "latitude": 47.29598,
+    "longitude": 8.564768
+  },
+  {
+    "from": "Zurich",
+    "to": "Veyrier, Pont de Sierne",
+    "reachable": true,
+    "latitude": 46.178711,
+    "longitude": 6.182065
+  },
+  {
+    "from": "Zurich",
+    "to": "Zollikon",
+    "reachable": true,
+    "latitude": 47.337328,
+    "longitude": 8.569743
+  },
+  {
+    "from": "Zurich",
+    "to": "Paris Gare de Lyon",
+    "reachable": true,
+    "latitude": 48.844997,
+    "longitude": 2.373915
+  },
+  {
+    "from": "Zurich",
+    "to": "Lyon Part Dieu",
+    "reachable": true,
+    "latitude": 45.76062,
+    "longitude": 4.859965
+  },
+  {
+    "from": "Zurich",
+    "to": "Marseille-Saint-Charles",
+    "reachable": true,
+    "latitude": 43.304062,
+    "longitude": 5.381438
+  },
+  {
+    "from": "Zurich",
+    "to": "Nice-Ville",
+    "reachable": false,
+    "latitude": 43.704943,
+    "longitude": 7.261687
+  },
+  {
+    "from": "Zurich",
+    "to": "Nantes",
+    "reachable": true,
+    "latitude": 47.216801,
+    "longitude": -1.542726
+  },
+  {
+    "from": "Zurich",
+    "to": "Strasbourg",
+    "reachable": true,
+    "latitude": 48.585095,
+    "longitude": 7.735153
+  },
+  {
+    "from": "Zurich",
+    "to": "Montpellier Saint-Roch",
+    "reachable": true,
+    "latitude": 43.604834,
+    "longitude": 3.880408
+  },
+  {
+    "from": "Zurich",
+    "to": "Lille-Europe",
+    "reachable": false,
+    "latitude": 50.639453,
+    "longitude": 3.077552
+  },
+  {
+    "from": "Zurich",
+    "to": "Rennes",
+    "reachable": false,
+    "latitude": 48.103043,
+    "longitude": -1.674861
+  },
+  {
+    "from": "Zurich",
+    "to": "Reims",
+    "reachable": true,
+    "latitude": 49.259341,
+    "longitude": 4.024412
+  },
+  {
+    "from": "Zurich",
+    "to": "St. Stephan",
+    "reachable": true,
+    "latitude": 46.505125,
+    "longitude": 7.400517
+  },
+  {
+    "from": "Zurich",
+    "to": "Toulon",
+    "reachable": false,
+    "latitude": 43.128658,
+    "longitude": 5.929116
+  },
+  {
+    "from": "Zurich",
+    "to": "Grenoble",
+    "reachable": true,
+    "latitude": 45.191238,
+    "longitude": 5.714087
+  },
+  {
+    "from": "Zurich",
+    "to": "Dijon",
+    "reachable": true,
+    "latitude": 47.322954,
+    "longitude": 5.026144
+  },
+  {
+    "from": "Zurich",
+    "to": "Angers-St-Laud",
+    "reachable": false,
+    "latitude": 47.464005,
+    "longitude": -0.55956
+  },
+  {
+    "from": "Zurich",
+    "to": "Nîmes",
+    "reachable": true,
+    "latitude": 43.832633,
+    "longitude": 4.365839
+  },
+  {
+    "from": "Zurich",
+    "to": "Epagny Metz-Tessy, Park Nord",
+    "reachable": true,
+    "latitude": 45.9335,
+    "longitude": 6.120774
+  },
+  {
+    "from": "Zurich",
+    "to": "Rouen-Rive-Droite",
+    "reachable": false,
+    "latitude": 49.449306,
+    "longitude": 1.093587
+  },
+  {
+    "from": "Zurich",
+    "to": "Brest (F)",
+    "reachable": false,
+    "latitude": 48.386938,
+    "longitude": -4.487343
+  },
+  {
+    "from": "Zurich",
+    "to": "Le Mans",
+    "reachable": false,
+    "latitude": 47.99535,
+    "longitude": 0.191149
+  },
+  {
+    "from": "Zurich",
+    "to": "Carouge GE, Tours",
+    "reachable": true,
+    "latitude": 46.183525,
+    "longitude": 6.135298
+  },
+  {
+    "from": "Zurich",
+    "to": "Clermont-Ferrand",
+    "reachable": false,
+    "latitude": 45.778763,
+    "longitude": 3.101121
+  },
+  {
+    "from": "Zurich",
+    "to": "Limoges-Bénédictins",
+    "reachable": false,
+    "latitude": 45.836469,
+    "longitude": 1.2676
+  },
+  {
+    "from": "Zurich",
+    "to": "Perpignan",
+    "reachable": false,
+    "latitude": 42.696569,
+    "longitude": 2.878604
+  },
+  {
+    "from": "Zurich",
+    "to": "Avignon Centre",
+    "reachable": true,
+    "latitude": 43.941358,
+    "longitude": 4.80602
+  },
+  {
+    "from": "Zurich",
+    "to": "Besançon Viotte",
+    "reachable": true,
+    "latitude": 47.247349,
+    "longitude": 6.022024
+  },
+  {
+    "from": "Zurich",
+    "to": "Orléans",
+    "reachable": false,
+    "latitude": 47.908092,
+    "longitude": 1.904323
+  },
+  {
+    "from": "Zurich",
+    "to": "Mulhouse",
+    "reachable": true,
+    "latitude": 47.741954,
+    "longitude": 7.343072
+  },
+  {
+    "from": "Zurich",
+    "to": "Troyes",
+    "reachable": false,
+    "latitude": 48.295989,
+    "longitude": 4.064619
+  },
+  {
+    "from": "Zurich",
+    "to": "Poitiers",
+    "reachable": false,
+    "latitude": 46.582203,
+    "longitude": 0.333027
+  },
+  {
+    "from": "Zurich",
+    "to": "Luzern, Paulusplatz",
+    "reachable": true,
+    "latitude": 47.043263,
+    "longitude": 8.303441
+  }
+]
