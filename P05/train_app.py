@@ -213,26 +213,45 @@ def get_train_company(country):
     return None
 
 
+def is_valid_city_name(name):
+    """Check if the city name is non-empty, not just spaces, and contains only letters and spaces."""
+    return bool(name and name.strip() and all(c.isalpha() or c.isspace() for c in name))
+
+
 # Main function
 def main():
     print("Enter the city names of your planned journey.")
-    start_city = input("Enter the start city: ")
-    end_city = input("Enter the final city: ")
+
+    for _ in range(3):  # Allow up to 3 attempts
+        start_city = input("Enter the start city: ")
+        if is_valid_city_name(start_city):
+            start_city = start_city.strip()
+            break
+        print("Invalid input. Please enter a valid city name (letters and spaces only, not empty or just spaces).")
+    else:
+        print("Too many invalid attempts. Exiting.")
+        return
+
+    for _ in range(3):
+        end_city = input("Enter the final city: ")
+        if is_valid_city_name(end_city):
+            end_city = end_city.strip()
+            break
+        print("Invalid input. Please enter a valid city name (letters and spaces only, not empty or just spaces).")
+    else:
+        print("Too many invalid attempts. Exiting.")
+        return
 
     # Log
     logging.info(f"User query: From {start_city} to {end_city}")
 
-    # Fetch coordinates for start and end cities
-    start_coords = fetch_coordinates(start_city)
-    end_coords = fetch_coordinates(end_city , "Italy" if end_city.lower() == "roma" else None)
-
-    if not start_coords or not end_coords:
-        logging.error("Could not fetch coordinates for one or both cities.")
-        print("Could not fetch coordinates for one or both cities.")
-        return
-
     start_country = get_country(start_city)
     end_country = get_country(end_city)
+
+    if not start_country or not end_country:
+        print("Could not determine the country for one or both cities. Please check your input.")
+        logging.error("Could not determine the country for one or both cities.")
+        return
 
     start_country = start_country.lower().strip()
     end_country = end_country.lower().strip()
@@ -248,6 +267,15 @@ def main():
             logging.error(f"Could not fetch connections from {start_city} to {end_city}.")
             print(f"Could not fetch connections from {start_city} to {end_city}.")
     else:
+        # Fetch coordinates for start and end cities
+        start_coords = fetch_coordinates(start_city)
+        end_coords = fetch_coordinates(end_city , "Italy" if end_city.lower() == "roma" else None)
+
+        if not start_coords or not end_coords:
+            logging.error("Could not fetch coordinates for one or both cities.")
+            print("Could not fetch coordinates for one or both cities.")
+            return
+        
         nearest_city = find_nearest_city_within_angle(start_coords , end_coords)
         if nearest_city:
             percentage_covered = calculate_percentage_covered(start_coords ,
