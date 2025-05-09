@@ -100,26 +100,39 @@ def fetch_coordinates_geopy(city , country=None):
 def fetch_coordinates_api(city):
     url = "http://transport.opendata.ch/v1/locations"
     params = {'query': city}
-    try:
-        response = requests.get(url , params=params)
-        response.raise_for_status()
-        data = response.json()
-        if 'stations' in data and data['stations']:
-            station = data['stations'][0]
-            if 'coordinate' in station and station['coordinate']:
-                lat = station['coordinate']['x']
-                lon = station['coordinate']['y']
-                if lat is not None and lon is not None:
-                    if -90 <= lat <= 90 and -180 <= lon <= 180:
-                        return {
-                            'city': city ,
-                            'id': station['id'] ,
-                            'name': station['name'] ,
-                            'latitude': lat ,
-                            'longitude': lon
-                        }
-    except requests.RequestException as e:
-        logging.error(f"Error fetching coordinates for {city}: {e}")
+    max_retries = 2
+
+    for attempt in range(max_retries):
+        try:
+            response = requests.get(url , params=params)
+            response.raise_for_status()
+            data = response.json()
+            if 'stations' in data and data['stations']:
+                station = data['stations'][0]
+                if 'coordinate' in station and station['coordinate']:
+                    lat = station['coordinate']['x']
+                    lon = station['coordinate']['y']
+                    if lat is not None and lon is not None:
+                        if -90 <= lat <= 90 and -180 <= lon <= 180:
+                            return {
+                                'city': city ,
+                                'id': station['id'] ,
+                                'name': station['name'] ,
+                                'latitude': lat ,
+                                'longitude': lon
+                            }
+            break  # If response is OK but no valid data, don't retry
+        
+        except (requests.Timeout, requests.ConnectionError) as e:
+            logging.warning(f"Attempt {attempt+1}: Temporary error fetching coordinates for {city}: {e}")
+            if attempt == max_retries - 1:
+                logging.error(f"Failed to fetch coordinates for {city} after {max_retries} attempts.")
+        except requests.HTTPError as e:
+            logging.error(f"HTTP error fetching coordinates for {city}: {e}")
+            break  # Hard error, don't retry
+        except Exception as e:
+            logging.error(f"Unexpected error fetching coordinates for {city}: {e}")
+            break
     return None
 
 
