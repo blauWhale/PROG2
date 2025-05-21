@@ -1,81 +1,39 @@
-README.txt
+**Train Connection App**
+A simple command-line app to fetch train connections using `transport.opendata.ch` and location info via `geopy`.
 
-Authors:
-Simon Akubueze
-Céline Grandchamp
-Mélina Langmeier
-Generative AI tools  were used in phases of this work.
-Institute of Applied Information Technology InIT ZHAW School of Engineering
+### How to Run
 
-Overview:
-Function: find train connections between cities.
- It includes a basic "machine learning" logic that uses a blacklist to avoid querying connections that dont exist.
- The application is built using Python and leverages several libraries such as:
- `requests` for HTTP requests, `tinydb` for database management, `geopy` for geolocation, and `haversine` for distance calculations.
+1. **Install required dependencies**:
 
-The primary functionality includes:
-- Fetching train connections between cities.
-1. Between cities in Switzerland and larger cities in France.
-2. Between Switzerland and larger cities in France and other cities in europe.
-- Storing city coordinates and train company information in a TinyDB database.
-- Managing a blacklist to avoid redundant API requests.
-- Suggesting alternative routes if direct connections are not available.
-- Show the link to reach the final city with the national rail of the country.
-- Logging and tracking information.
+   ```bash
+   pip install requests geopy haversine tinydb
+   ```
 
-Files:
-- train_app.py: Main script to handle user input, fetch train connections, and manage the blacklist.
-- db.py: Script to initialize and populate the database with city and train company information.
-- city_data.json: TinyDB database file that stores city data, train company information, and the blacklist.
+2. **Start the application**:
 
-Requirements:
-Make sure you have the following Python packages installed:
-```sh
-pip install requests tinydb geopy haversine
+   ```bash
+   python train.py
+   ```
 
-Class Diagram:
-City
------
-Attributes:
-- name: str
-- country: str
-- coordinates: tuple
+   On first run, the database will be automatically initialized via `db_initializer.py`, fetching known cities and train company info.
 
-TrainCompany
-------------
-Attributes:
-- country: str
-- variations: list
+### Files
 
-Blacklist
----------
-Attributes:
-- from_city: str
-- to_city: str
+* **`train.py`**
+  Main entry point for the CLI tool. Manages user input, geolocation, transport connections, logging, and fallback routing logic.
 
-Database
---------
-Attributes:
-- cities: TinyDB
-- train_companies: TinyDB
-- blacklist: TinyDB
+* **`db_initializer.py`**
+  Initializes the local TinyDB database (`city_data.json`) with coordinates for major Swiss and French cities and a mapping of European train companies.
 
-Methods:
-- add_city_to_db(city_data: dict) -> None
-- add_train_company_to_db(country: str, variations: list) -> None
-- update_database() -> None
+* **`city_data.json`**
+  TinyDB-based local database storing cities, their coordinates, and train company mappings.
 
-TrainConnectionFinder
----------------------
-Attributes:
-- database: Database
+* **`reachability.py`**
+  Optional utility script to generate a `reachability_from_<city>.json` file.
+  It checks if each city in the database is reachable from a given start city (default: Zürich) using the transport API.
 
-Methods:
-- is_blacklisted(from_city: str, to_city: str) -> bool
-- add_to_blacklist(from_city: str, to_city: str) -> None
-- fetch_connections(from_city: str, to_city: str) -> list
-- format_connections(connections: list) -> str
-- get_country(city: str) -> str
-- find_nearest_city_within_angle(start_coords: tuple, end_coords: tuple) -> str
-- calculate_percentage_covered(start_coords: tuple, intermediate_coords: tuple, end_coords: tuple) -> float
+* **`reachability_from_zurich.json`**
+  Auto-generated file containing connection reachability data from Zurich to all other cities.
+
+---
 
