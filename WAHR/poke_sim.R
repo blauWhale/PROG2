@@ -88,3 +88,17 @@ for (tage in tage_vektor) {
   cat("  ∅ Extra Karten: ", round(res$extra_karten, 1), "\n")
   cat("  ∅ Kosten pro zusätzlicher Karte: $", round(res$kosten_pro_extra, 2), "\n\n")
 }
+
+for (tage in tage_vektor) {
+  diff <- ergebnisse[[as.character(tage)]]$premium - ergebnisse[[as.character(tage)]]$gratis
+  df_diff <- data.frame(Extra = diff)
+  p_diff <- ggplot(df_diff, aes(x = Extra)) +
+    geom_histogram(binwidth = 1, fill = "skyblue", color = "black") +
+    labs(
+      title = paste("Verteilung der Extra-Karten (Premium - Gratis) nach", tage, "Tagen"),
+      x = "Anzahl Extra-Karten",
+      y = "Anzahl Simulationen"
+    ) +
+    theme_minimal()
+  print(p_diff)
+}
