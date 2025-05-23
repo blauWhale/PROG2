@@ -1,0 +1,190 @@
+---
+title: "Pokémon Card Pack Simulation: Kosten-Nutzen-Analyse"
+output: html_document
+---
+
+## Simulation: Packs und Karten
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(ggplot2)
+```
+
+### Daten einlesen und Funktionen
+
+```{r data-and-functions}
+# Daten einlesen
+karten <- read.csv("./data/Mythical_Island.csv", stringsAsFactors = FALSE)
+
+parse_percent_column <- function(x) {
+  # Wenn leer oder nur Spaces → 0 setzen
+  x[trimws(x) == ""] <- "0%"
+  # Prozentzeichen entfernen und umrechnen
+  as.numeric(sub("%", "", x)) / 100
+}
+
+alle_karten <- karten$Name
+prob_1_3 <- parse_percent_column(karten$First.third.cards)
+prob_4   <- parse_percent_column(karten$Fourth.card)
+prob_5   <- parse_percent_column(karten$Fifth.card)
+
+prob_total <- prob_1_3 + prob_4 + prob_5
+cat("Karten mit > 0 Drop-Chance: ", sum(prob_total > 0), "/", length(alle_karten), "\n")
+
+ziehe_pack <- function() {
+  c(
+    sample(alle_karten, size = 3, replace = TRUE, prob = prob_1_3),
+    sample(alle_karten, size = 1, replace = TRUE, prob = prob_4),
+    sample(alle_karten, size = 1, replace = TRUE, prob = prob_5)
+  )
+}
+
+# Schnelle Zieh-Funktion
+simuliere_jahr_mit_slots <- function(packs_pro_tag, tage = 30) {
+  gezogen <- replicate(packs_pro_tag * tage, ziehe_pack(), simplify = FALSE)
+  gezogen <- unlist(gezogen)  # flatten
+  length(unique(gezogen))
+}
+```
+
+---
+
+## Monatliche Simulation (Beispiel: 30 Tage)
+
+```{r monthly-simulation}
+N <- 1000
+tage_vektor <- c(30)
+kosten_premium_pro_monat <- 10
+
+# Simulationsergebnisse initialisieren
+ergebnisse <- list()
+
+for (tage in tage_vektor) {
+  gratis <- replicate(N, simuliere_jahr_mit_slots(2, tage = tage))
+  premium <- replicate(N, simuliere_jahr_mit_slots(4, tage = tage))
+
+  ergebnisse[[as.character(tage)]] <- list(
+    tage = tage,
+    gratis = gratis,
+    premium = premium,
+    kosten = (tage / 30) * kosten_premium_pro_monat,
+    extra_karten = mean(premium - gratis),
+    kosten_pro_extra = ((tage / 30) * kosten_premium_pro_monat) / mean(premium - gratis)
+  )
+}
+
+for (tage in tage_vektor) {
+  df <- data.frame(
+    Karten = c(ergebnisse[[as.character(tage)]]$gratis,
+               ergebnisse[[as.character(tage)]]$premium),
+    Modell = rep(c("Gratis", "Premium"), each = N)
+  )
+
+  p <- ggplot(df, aes(x = Karten, fill = Modell)) +
+    geom_bar(position = "dodge", color = "black") +
+    labs(
+      title = paste("Verteilung der Kartenzahl nach", tage, "Tagen"),
+      subtitle = paste0("Ø Extra Karten mit Premium: ",
+                        round(ergebnisse[[as.character(tage)]]$extra_karten, 1),
+                        " | Kosten pro Extra-Karte: $",
+                        round(ergebnisse[[as.character(tage)]]$kosten_pro_extra, 2)),
+      x = "Anzahl verschiedener Karten",
+      y = "Anzahl Simulationen"
+    ) +
+    theme_minimal() +
+    theme(legend.position = "top")
+
+  print(p)
+}
+
+for (tage in tage_vektor) {
+  res <- ergebnisse[[as.character(tage)]]
+  cat("🔹", tage, "Tage:\n")
+  cat("  Premium-Kosten: $", res$kosten, "\n")
+  cat("  ∅ Extra Karten: ", round(res$extra_karten, 1), "\n")
+  cat("  ∅ Kosten pro zusätzlicher Karte: $", round(res$kosten_pro_extra, 2), "\n\n")
+}
+
+for (tage in tage_vektor) {
+  diff <- ergebnisse[[as.character(tage)]]$premium - ergebnisse[[as.character(tage)]]$gratis
+  df_diff <- data.frame(Extra = diff)
+  p_diff <- ggplot(df_diff, aes(x = Extra)) +
+    geom_histogram(binwidth = 1, fill = "skyblue", color = "black") +
+    labs(
+      title = paste("Verteilung der Extra-Karten (Premium - Gratis) nach", tage, "Tagen"),
+      x = "Anzahl Extra-Karten",
+      y = "Anzahl Simulationen"
+    ) +
+    theme_minimal()
+  print(p_diff)
+}
+```
+
+---
+
+## Kosten-Nutzen-Analyse über verschiedene Zeiträume
+
+```{r cost-benefit-analysis}
+N <- 1000
+tage_vektor <- seq(5, 60, by = 5)
+ergebnisse <- list()
+for (tage in tage_vektor) {
+  gratis <- replicate(N, simuliere_jahr_mit_slots(2, tage = tage))
+  premium <- replicate(N, simuliere_jahr_mit_slots(4, tage = tage))
+  ergebnisse[[as.character(tage)]] <- list(
+    gratis = gratis,
+    premium = premium,
+    extra_karten = mean(premium - gratis)
+  )
+}
+
+result_table <- data.frame(
+  Tage = tage_vektor,
+  Gratis = sapply(ergebnisse, function(res) mean(res$gratis)),
+  Premium = sapply(ergebnisse, function(res) mean(res$premium)),
+  Extra = sapply(ergebnisse, function(res) res$extra_karten)
+)
+knitr::kable(result_table, digits = 3, caption = "Durchschnittliche Anzahl verschiedener Karten (Gratis, Premium) und Extra-Karten")
+
+kosten_premium_pro_monat <- 10
+cost_benefit <- data.frame(
+  Kosten = (tage_vektor / 30) * kosten_premium_pro_monat,
+  ExtraKarten = sapply(ergebnisse, function(res) res$extra_karten)
+)
+
+ggplot(cost_benefit, aes(x = Kosten, y = ExtraKarten)) +
+  geom_line(color = "blue", size = 1.2) +
+  geom_point(color = "red", size = 2) +
+  labs(
+    title = "Kosten vs. Ø Extra-Karten mit Premium",
+    x = "Premium-Kosten ($)",
+    y = "Ø Extra einzigartige Karten"
+  ) +
+  theme_minimal()
+```
+
+---
+
+## Interpretation
+
+**Was passiert?**
+
+- Sowohl Gratis- als auch Premium-Spieler nähern sich mit der Zeit der maximalen Anzahl an einzigartigen Karten (hier etwa 68).
+- Zu Beginn bringt Premium einen grossen Vorteil (Extra ≈ 15).
+- Mit zunehmenden Tagen nähern sich beide Gruppen dem Sammel-Limit, sodass der Unterschied (Extra) schnell schrumpft.
+- Nach einiger Zeit haben fast alle Spieler fast alle Karten, daher bringt mehr bezahlen kaum noch zusätzliche einzigartige Karten.
+
+**Warum sinkt der Vorteil?**
+
+- **Abnehmender Grenznutzen:** Je mehr Packs man öffnet, desto weniger neue Karten bekommt man, weil man die meisten schon hat.
+- Premium hilft, schneller an Karten zu kommen, aber nicht an mehr Karten insgesamt.
+- Mit der Zeit verschwindet der Vorteil von Premium, weil beide Gruppen fast alle Karten besitzen.
+
+**Einfache Zusammenfassung:**
+
+> Premium bringt am Anfang viele zusätzliche Karten, aber je länger man spielt, desto weniger lohnt es sich. Nach ein bis zwei Monaten haben fast alle Spieler fast alle Karten, und mehr bezahlen bringt kaum noch einen Vorteil.
+
+---
+
+**Hinweis:**  
+Diese Analyse zeigt das typische Verhalten von Sammelspielen mit zufälligen Belohnungen und ist ein gutes Beispiel für abnehmenden Grenznutzen ("diminishing returns").
