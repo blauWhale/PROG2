@@ -1,6 +1,6 @@
 ---
 title: "Analyse einer Pokémon-Karten-Simulation mit God Packs"
-author: "Ihr Name"
+author: "Rossasco, Marco; Jovicic, Vladimir; Blaauw, Raphael"
 date: "`r Sys.Date()`"
 output:
   html_document:
@@ -21,7 +21,7 @@ Ziel dieser Simulation ist es, den Prozess des Sammelns von Pokémon-Karten unte
 
 ### 1.1 Datenbasis und Wahrscheinlichkeiten
 
-Die Simulation basiert auf zwei Datensätzen: einem für reguläre Karten und einem für die speziellen Karten aus "God Packs". Wichtig sind hier die Ziehwahrscheinlichkeiten für jede Karte.
+Die Simulation basiert auf zwei echten Datensätzen des Mobile Games „Pokémon TCG Pocket”: einem für reguläre Karten und einem für die speziellen Karten aus "God Packs". Wichtig sind hier die Ziehwahrscheinlichkeiten für jede Karte.
 
 ```{r data-and-parsing, echo=TRUE}
 # Daten einlesen
