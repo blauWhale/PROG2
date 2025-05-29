@@ -83,6 +83,8 @@ ziehe_pack <- function(current_god_pack_rate) {
 
 Die Funktion `simuliere_jahr_mit_slots` aggregiert das Ziehen von Packs über eine bestimmte Anzahl Tage. Die Hauptsimulation führt diesen Prozess `N` Mal für jede Kombination von Spieldauer (`tage_vektor`) und God-Pack-Wahrscheinlichkeit (`god_pack_chance_vektor`) durch, um Verteilungen der Ergebnisse zu erhalten.
 
+Es wird zwischen einem Gratis- und einem Premium-Modell unterschieden. Das Gratis-Modell basiert auf dem Ziehen von zwei Kartenpacks pro Tag, während im Premium-Modell vier Packs täglich geöffnet werden. Beide Modelle verwenden identische Wahrscheinlichkeiten und Kartendaten; der einzige Unterschied liegt in der Anzahl der gezogenen Packs, wodurch das Premium-Modell ein intensiveres Spielverhalten oder den Einsatz von Echtgeld simuliert.
+
 ```{r function-simuliere-jahr-und-hauptschleife, echo=TRUE}
 simuliere_jahr_mit_slots <- function(packs_pro_tag, tage = 30, current_god_pack_rate) {
   gezogen <- replicate(packs_pro_tag * tage, ziehe_pack(current_god_pack_rate), simplify = FALSE)
